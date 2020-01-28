@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 
 try:
-    from .CEA_Evaluator import CEA_Evaluator
-    from .CPA_Evaluator import CPA_Evaluator
+    # from .CEA_Evaluator import CEA_Evaluator
+    # from .CPA_Evaluator import CPA_Evaluator
     from .CTA_Evaluator import CTA_Evaluator
 except ImportError as e:
-    from CEA_Evaluator import CEA_Evaluator
-    from CPA_Evaluator import CPA_Evaluator
+    # from CEA_Evaluator import CEA_Evaluator
+    # from CPA_Evaluator import CPA_Evaluator
     from CTA_Evaluator import CTA_Evaluator
 
 
@@ -57,20 +57,20 @@ if __name__ == "__main__":
     # Lets assume the the ground_truth is a CSV file
     # and is present at data/ground_truth.csv
     # and a sample submission is present at data/sample_submission.csv
-    answer_file_path = "data/CEA_Round4_gt.csv"
-    _client_payload = {}
-    _client_payload["submission_file_path"] = "data/CEA_Round4_sub.csv"
+    # answer_file_path = "data/CEA_Round4_gt.csv"
+    # _client_payload = {}
+    # _client_payload["submission_file_path"] = "data/CEA_Round4_sub.csv"
 
-    _client_payload["aicrowd_submission_id"] = 1123
-    _client_payload["aicrowd_participant_id"] = 1234
+    # _client_payload["aicrowd_submission_id"] = 1123
+    # _client_payload["aicrowd_participant_id"] = 1234
     
-    # Instaiate a dummy context
-    _context = {}
-    # Instantiate an evaluator
-    aicrowd_evaluator = TableAnnotationEvaluator(answer_file_path, "CEA")
-    # Evaluate
-    result = aicrowd_evaluator._evaluate(_client_payload, _context)
-    print(result)
+    # # Instaiate a dummy context
+    # _context = {}
+    # # Instantiate an evaluator
+    # aicrowd_evaluator = TableAnnotationEvaluator(answer_file_path, "CTA")
+    # # Evaluate
+    # result = aicrowd_evaluator._evaluate(_client_payload, _context)
+    # print(result)
 
 
     #############################################################################
@@ -79,20 +79,20 @@ if __name__ == "__main__":
     # Lets assume the the ground_truth is a CSV file
     # and is present at data/ground_truth.csv
     # and a sample submission is present at data/sample_submission.csv
-    answer_file_path = "data/CPA_Round4_gt.csv"
-    _client_payload = {}
-    _client_payload["submission_file_path"] = "data/CPA_Round4_sub.csv"
+    # answer_file_path = "data/CPA_Round4_gt.csv"
+    # _client_payload = {}
+    # _client_payload["submission_file_path"] = "data/CPA_Round4_sub.csv"
 
-    _client_payload["aicrowd_submission_id"] = 1123
-    _client_payload["aicrowd_participant_id"] = 1234
+    # _client_payload["aicrowd_submission_id"] = 1123
+    # _client_payload["aicrowd_participant_id"] = 1234
     
-    # Instaiate a dummy context
-    _context = {}
-    # Instantiate an evaluator
-    aicrowd_evaluator = TableAnnotationEvaluator(answer_file_path, "CPA")
-    # Evaluate
-    result = aicrowd_evaluator._evaluate(_client_payload, _context)
-    print(result)
+    # # Instaiate a dummy context
+    # _context = {}
+    # # Instantiate an evaluator
+    # aicrowd_evaluator = TableAnnotationEvaluator(answer_file_path, "CPA")
+    # # Evaluate
+    # result = aicrowd_evaluator._evaluate(_client_payload, _context)
+    # print(result)
 
     #############################################################################
     # Test CTA Task
@@ -100,9 +100,9 @@ if __name__ == "__main__":
     # Lets assume the the ground_truth is a CSV file
     # and is present at data/ground_truth.csv
     # and a sample submission is present at data/sample_submission.csv
-    answer_file_path = "data/CTA_Round4_gt.csv"
+    answer_file_path = "dataset/Round1/gt/CTA_Round1_gt.csv"
     _client_payload = {}
-    _client_payload["submission_file_path"] = "data/CTA_Round4_sub.csv"
+    _client_payload["submission_file_path"] = "dataset/Round1/gt/df_annotations.csv"
 
     _client_payload["aicrowd_submission_id"] = 1123
     _client_payload["aicrowd_participant_id"] = 1234
